@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },  
+  },
   "author": "harsh and co",
   "license": "ISC",
   "dependencies": {
@@ -23,6 +23,7 @@
     "mongoose": "^7.0.5",
     "node-fetch": "^3.2.3",
     "render": "^0.1.4",
-    "request-promise": "^4.2.6"
+    "request-promise": "^4.2.6",
+    "socket.io": "^4.7.4"
   }
 }
