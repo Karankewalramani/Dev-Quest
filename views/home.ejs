@@ -4,25 +4,46 @@
   <title>WELCOME</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <style>
-    body { 
-      background-image: url('https://thumbs.dreamstime.com/z/colorful-pharmaceutical-medicine-pills-tablets-different-medical-drugs-blue-background-medicine-flat-lay-colorful-175542604.jpg');
-      /*background-image: url('https://img.freepik.com/free-vector/medical-healthcare-blue-color_1017-26807.jpg?size=626&ext=jpg');*/
-      /* background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210630/pngtree-hexagon-international-health-day-green-banner-background-image_735377.jpg');*/      background-repeat: no-repeat;
+    body {
+      /* background-image: url('https://thumbs.dreamstime.com/z/colorful-pharmaceutical-medicine-pills-tablets-different-medical-drugs-blue-background-medicine-flat-lay-colorful-175542604.jpg'); */
+      background-image: url('https://images.unsplash.com/photo-1471864190281-a93a3070b6de?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      /* background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210630/pngtree-hexagon-international-health-day-green-banner-background-image_735377.jpg');*/
+      background-repeat: no-repeat;
       background-size: 100%;
-     }
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: black;
+      opacity: 0.7;
+      width: 100%;
+      height: 100%;
+    }
+
     .navig {
+      padding: 1.2rem;
+      height: 50px;
+      opacity: 0.8;
+      position: sticky;
+      top: 0px;
+      background-color: white;
+      justify-content: space-between;
       overflow: hidden;
-      background-color: #e9e9e9;
+      padding-left: 1100px;
     }
 
     .navig a {
+      /* margin-left: 600px; */
       float: left;
       display: block;
       color: black;
       text-align: center;
-      padding: 14px 16px;
+      padding: 10px 16px;
       text-decoration: none;
-      font-size: 17px;
+      font-size: 25px;
       margin-right: 15px;
       width: 72.5px;
     }
@@ -34,7 +55,7 @@
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
-      font-size: 17px;
+      font-size: 25px;
       margin-right: 15px;
       width: 72.5px;
     }
@@ -46,19 +67,18 @@
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
-      font-size: 17px;
-      margin-right: 15px ;
-      width:72.5px;
-     }
+      font-size: 25px;
+      margin-right: 15px;
+      width: 72.5px;
+    }
 
     a:hover {
-      background-color: #ddd;
       color: black;
     }
 
     a:active {
-      background-color: #2196F3;
-      color: white;
+      background-color: rgb(245, 207, 207);;
+      color: black;
     }
 
     p {
@@ -93,17 +113,18 @@
 
 <body>
   <div class="navig" id="nav">
+    <a href="">Home</a>
     <a href="/order">Order</a>
     <a href="/contact">Contact</a>
-    
+
   </div>
-  <br><br><br><br><br><br><br><br><br><br><br>
-  <div class="adjust">
-    <p style="font-size:75px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PHARMFIRST</font>
-    </p>
-    <p style="font-size:40px" style="margin : 0; padding-top:0;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<i>"We care
-      for your well-being"</i></p> 
+  <div class="adjust" style="margin-top: 280px;">
+    <p style="font-size:75px; color:rgb(246, 209, 209); z-index:5; position: relative; margin-left: 100px;">PHARMFIRST</p>
+    <p style="font-size:40px" style="margin : 0; padding-top:0;"><i
+        style="color: rgb(255, 193, 193); z-index: 10; position: relative; margin-left: 300px;">"We care
+        for your well-being"</i></p>
     </p>
   </div>
 </body>
+
 </html>

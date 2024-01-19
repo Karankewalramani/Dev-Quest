@@ -4,8 +4,9 @@
   "description": "comparing medicinal prices",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  },  
   "author": "harsh and co",
   "license": "ISC",
   "dependencies": {
@@ -19,7 +20,7 @@
     "express-session": "^1.17.2",
     "firebase": "^9.17.2",
     "got": "^12.0.3",
-    "mongoose": "^6.10.2",
+    "mongoose": "^7.0.5",
     "node-fetch": "^3.2.3",
     "render": "^0.1.4",
     "request-promise": "^4.2.6"

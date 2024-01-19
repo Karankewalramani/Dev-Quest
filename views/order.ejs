@@ -3,14 +3,11 @@
         <title>Order</title>
     <style>
        body{
-        background-image: url('https://e0.pxfuel.com/wallpapers/193/935/desktop-wallpaper-aesthetic-light-pink-background-largest-portal-pixel-pink.jpg');
+        /* background-image: url('https://e0.pxfuel.com/wallpapers/193/935/desktop-wallpaper-aesthetic-light-pink-background-largest-portal-pixel-pink.jpg'); */
+        background-color: rgb(255, 193) ;
        }
         .navig {
             overflow: hidden;
-            background-color: #e9e9e9;
-          }
-      
-          .navig a {
             float: left;
             display: block;
             color: black;
@@ -114,10 +111,6 @@
             position: absolute;         
             bottom: 52%
         }
-
-
-
-
         .sidenav {
           width: 40%;
           position: fixed;
@@ -166,20 +159,14 @@
         <div class="main">
         <div class="navig" id="nav">
           <a href="/">Home</a>
-          <!--<a href="/order">Order</a> -->
           <a href="/contact">Contact</a>
           
             <form action="/results" method="POST">
-            
               <input type="text" placeholder="Enter a medicine.." name="search">
               <button type="submit">Search</button>
-              <!-- <button value="submit">Search</button> -->
             </form>
         </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br>
-        <!-- <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;--or--</p> -->
         <form action="/upload" method="POST" enctype="multipart/form-data">
-            <!-- {%csrf_token%} -->
         <input type="file" name="image" class="place" >
         <!-- <input type="submit" value="Upload Prescription" class="btn btn-primary">  -->
         </form>
