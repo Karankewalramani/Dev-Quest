@@ -4,7 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
-            /* background-image: url('https://e0.pxfuel.com/wallpapers/193/935/desktop-wallpaper-aesthetic-light-pink-background-largest-portal-pixel-pink.jpg'); */
+            /* background-image: url('https://st2.depositphotos.com/1265075/6929/i/450/depositphotos_69297969-stock-photo-contact-us-web-icons-on.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            width: 100vw; */
             font-family: Arial, Helvetica, sans-serif;
         }
 
@@ -12,13 +16,13 @@
             box-sizing: border-box;
         }
 
-        /* Style inputs */
         input[type=text],
         select,
         textarea {
             width: 100%;
             padding: 12px;
-            border: 1px solid #ccc;
+            border-radius: 10px;
+            border: 3px solid #000000;
             margin-top: 6px;
             margin-bottom: 16px;
             resize: vertical;
@@ -32,11 +36,7 @@
             cursor: pointer;
         }
 
-      /*  input[type=submit]:hover {
-           /* background-color: #45a049;*/
-        
 
-        /* Style the container/contact section */
         .container {
             border-radius: 5px;
             /*background-color: #fb77e7;*/
@@ -45,7 +45,6 @@
             height: 90vh;
         }
 
-        /* Create two columns that float next to eachother */
         .column {
             float: left;
             width: 50%;
@@ -53,14 +52,23 @@
             padding: 20px;
         }
 
-        /* Clear floats after the columns */
         .row:after {
             content: "";
             display: table;
             clear: both;
         }
 
-        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        .btn a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .btn{
+            width: 100%;
+            height: 40px;
+            background-color: rgb(245, 207, 207);
+        }
+
         @media screen and (max-width: 600px) {
 
             .column,
@@ -80,15 +88,15 @@
         </div>
         <div class="row">
             <div class="column">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/004/977/252/small/contact-us-word-with-wooden-cubes-free-photo.jpg"
-                    style="width:99%">
+                <img src="https://cdn.vectorstock.com/i/preview-1x/94/79/contact-us-line-banner-vector-46209479.jpg"
+                    style="width: 501px; height: 250px; margin: 90px 0 0 100px;">
             </div>
             <div class="column">
                 <form action="/contact">
                     <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <input type="text" id="fname" name="firstname" placeholder="Enter first name">
                     <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <input type="text" id="lname" name="lastname" placeholder="Enter last name">
                     <label for="country">Country</label>
                     <select id="country" name="country">
                         <option value="australia">Australia</option>
@@ -98,15 +106,15 @@
                         <option value="india">Uk</option>
                         <option value="usa">USA</option>
                     </select>
-                    <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.."
+                    <label for="subject">Message</label>
+                    <textarea id="subject" name="subject" placeholder="Your Message"
                         style="height:170px"></textarea>
                         <!--<form action="/login" method="POST">
                             <input type="submit" value="Submit">
                
                             
                         </form>-->
-                    <button><a href="/login">Submit</a></button>
+                    <button class="btn"><a href="/login">Submit</a></button>
                     <!-- <input type="submit" value="Submit">
                     <a href="login.ejs">Submit</a>
                     </input> -->
