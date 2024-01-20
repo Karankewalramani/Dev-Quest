@@ -1,5 +1,6 @@
 <html>
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     .navig {
       margin: 7px !important;
@@ -99,6 +100,7 @@
       /* font-size: 20px; */
       border: 2px solid black;
       text-align: center;
+      height: 350px;
       /* padding: 5px; */
     }
 
@@ -188,7 +190,8 @@ left: 30%;
     <% for (var i=0;i<practo_names.length;i++) {%>
         <form action="/cart" method="post" class="forms">
             <div class="card">
-              <p>Practo</p> 
+              <div style="display: flex; justify-content: space-between;"><p>Practo</p>
+                <a href=""><i class="fa-regular fa-heart"></i> </a></div>
               <img src="<%=practo_images[i]%>" alt="Avatar" class="practo_img">
                 <div class="container">
                   <h4><b><%=practo_names[i]%></b></h4> 
@@ -196,7 +199,8 @@ left: 30%;
                   <!-- <p>Practo</p>  -->
                   <% if (practo_names[i].includes('Dolo-650 Tablet')) { %>
                     <button class="cart_set" target="_blank"><a href="https://www.practo.com/medicine-info/dolo-650-mg-tablet-3663">BUY</a></button>
-                  <% } else if (practo_names[i].includes('Dolo Drops')) { %>
+                  <% } 
+                  else if (practo_names[i].includes('Dolo Drops')) { %>
                     <button class="cart_set" target="_blank"><a href="https://www.practo.com/medicine-info/dolo-100-mg-drops-3654">BUY</a></button>
                   <% } else if (practo_names[i].includes("Neurobion Forte Tablet 30's")) { %>
                     <button class="cart_set" target="_blank"><a href="https://www.practo.com/health-products/neurobion-forte-tablet-30-s-16283/p">BUY</a></button>
@@ -214,7 +218,8 @@ left: 30%;
     <% for (var i=0;i<netmeds_names.length;i++) {%>
       <form action="/cart" method="post" class="forms">
           <div class="card">
-            <p>Netmeds</p> 
+            <div style="display: flex; justify-content: space-between;"><p>Netmeds</p>
+              <a href=""><i class="fa-regular fa-heart"></i> </a></div>
             <img src="<%=netmeds_images[i]%>" alt="Avatar" class="netmeds_img">
               <div class="container">
                 <h4><b><%=netmeds_names[i]%></b></h4>
@@ -240,7 +245,8 @@ left: 30%;
       <% for (var i=0;i<pharm_names.length;i++) {%>
           <form action="/cart" method="post" class="forms">
             <div class="card">
-             <p>PharmFirst</p> 
+              <div style="display: flex; justify-content: space-between;"><p>PharmFirst</p>
+                <a href=""><i class="fa-regular fa-heart"></i> </a></div> 
              <img src="<%=pharm_images[i]%>" alt="Avatar" class="pharm_img">
                 <div class="container">
                   <h4><b><%=pharm_names[i]%></b></h4> 
