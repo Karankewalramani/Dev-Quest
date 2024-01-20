@@ -17,6 +17,7 @@ const loginRoute = require('./routes/login.route');
 const signUpRoute = require('./routes/signUp.route');
 const logoutRoute = require('./routes/logout.route');
 const cartRoute = require('./routes/cart.route');
+const wishlistRoute = require('./routes/wishlist.route');
 
 require('./config/mongodb.config');
 
@@ -41,6 +42,12 @@ io.on('connection', (socket) => {
 
   // Emit a welcome notification to the connected client
   socket.emit('notification', 'Welcome! You are connected.');
+
+  // Emit a reminder to the connected client
+  socket.emit('reminder', 'Do you want us to deliver this medicine to you?');
+
+  // Emit news to the connected client
+  socket.emit('news', 'Breaking News: Important information here.');
 
   socket.on('disconnect', () => {
     console.log('User disconnected');
@@ -70,6 +77,7 @@ app.use('/login', loginRoute);
 app.use('/logoutuser', logoutRoute);
 app.use('/signup', signUpRoute);
 app.use('/cart', cartRoute);
+app.use('/wishlist', wishlistRoute)
 
 function sendEmailNotification() {
   const mailOptions = {
@@ -87,27 +95,6 @@ function sendEmailNotification() {
     }
   });
 }
-
-
-io.on('connection', (socket) => {
-    console.log('A user connected');
-
-    // Emit a welcome notification to the connected client
-    socket.emit('notification', 'Welcome! You are connected.');
-
-    // Emit a reminder to the connected client
-    socket.emit('reminder', 'Do you want us to deliver this medicine to you?');
-
-    // Emit news to the connected client
-    socket.emit('news', 'Breaking News: Important information here.');
-
-    socket.on('disconnect', () => {
-        console.log('User disconnected');
-    });
-});
-
-// ... (existing code)
-
 
 server.listen(port, () => {
   console.log(`Server listening to port ${port}`);
