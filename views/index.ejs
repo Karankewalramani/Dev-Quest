@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notification Example</title>
+</head>
+<body>
+
+  <button onclick="sendRequest()">Reduce Prices</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"></script>
+  <script>
+    const socket = io();
+
+    socket.on('notification', (message) => {
+      alert(message); // You can customize this to show a notification popup or update the UI
+    });
+
+    function sendRequest() {
+      // Use AJAX or fetch to trigger the /reduce-prices route
+      fetch('/reduce-prices', { method: 'GET' })
+        .then(response => {
+          if (response.ok) {
+            return response.text();
+          } else {
+            throw new Error('Error triggering price reduction');
+          }
+        })
+        .then(data => {
+          alert(data); // Show a success message or handle as needed
+        })
+        .catch(error => {
+          console.error(error);
+          alert('Error reducing prices');
+        });
+    }
+  </script>
+</body>
+</html>
